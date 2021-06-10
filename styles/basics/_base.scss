@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    font-family: Hack, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: .05em;
+    color: $clrA;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    line-height: 1.3;
+    margin: 0;
+}
+
+p, pre {
+    margin: 0;
+}
+
+button, select, input, textarea {
+    border: none;
+    outline: none;
+}
+
+button,
+label,
+input,
+select,
+option {
+    cursor: pointer;
+}
+
+button {
+    padding: 0;
+}
+
+textarea {
+    cursor: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}

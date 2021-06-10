@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Text Based Calculator</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.css"
+        integrity="sha512-VZssMZ4DFoWOybwn4WosagyfJkBO7pYU5NdVRbCtu/ujv6MVL1DGbENVRCMwMxuEra76muhpcmxr6E8ECl8QAQ=="
+        crossorigin="anonymous" />
+</head>
+
+<body onload="init()">
+    <div class="calc-page flex">
+
+        <button class="info-btn" onclick="toggleInfo()">
+            <img src="./assets/imgs/info.png" />
+        </button>
+
+        <div class="info-modal-container">
+            <div class="info-modal">
+                <h1>Hello everyone!</h1>
+                <pre>This calculator evaluates a series of assignment operators provided as command-line input and prints the final values of the variables.
+Press <span class="bold">Return</span> to calculate, <span class="bold">Shift + Return</span> to add a new line
+
+<span class="bold">Characters</span>
+The following characters are supported:
+letters (uppercase & lowercase), digits, space, dot, (, ), =, *, /, %, +, -, $, _
+
+<span class="bold">Operators</span>
+The following operators are valid:
+=, *=, /=, %=, +=, -=, +, -, *, /,%, **, ++, --
+
+<span class="bold">Variables</span>
+Variable names can be any valid JavaScript variable name: they can include letters, digits, dollar signs ($) and underscores (_). They can not start with digits.
+
+<span class="bold">Numbers</span>
+All real numbers are okay.
+
+For example:
+<span class="programming">i = 0
+j = ++i
+x = i++ + 5
+y = 5 + 3 * 10
+i += y</span>
+
+Result:
+<span class="programming">i: 37, j: 1, x: 6, y: 35</span></pre>
+            </div>
+        </div>
+
+
+        <div class="title">
+            <h1>Text based</h1>
+            <h1>calculator</h1>
+        </div>
+
+
+        <div class="calc">
+            <div class="input-container">
+                <textarea class="input" type="text"></textarea>
+            </div>
+
+            <div class="output-container">
+                <h1 class="output"></h1>
+            </div>
+
+            <button class="reset" onclick="reset()">
+                <img src="./assets/imgs/reset.png" />
+            </button>
+        </div>
+
+
+        <img class="airplane" src="./assets/imgs/paper-airplane.png" />
+
+    </div>
+
+    <script src="js/services/util-service.js"></script>
+    <script src="js/services/calc-service.js"></script>
+    <script src="js/controller.js"></script>
+
+    <!-- <script src="js/unit-testing.js"></script> -->
+</body>
+
+</html>
